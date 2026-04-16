@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>CI/CD Test</title></head>
+<body>
+    <h1>CI/CD Pipeline is Working!</h1>
+    <p id="msg">Loading...</p>
+    <script>
+        fetch('/api/hello')
+            .then(r => r.json())
+            .then(d => document.getElementById('msg').innerText = d.message);
+    </script>
+</body>
+</html>
